@@ -22,7 +22,8 @@
             width: 80%;
         }
 
-        .sposs, .thank-you {
+        .sposs,
+        .thank-you {
             background-color: #e8af12;
             padding: 85px;
             border-radius: 8px;
@@ -32,14 +33,16 @@
             box-sizing: border-box;
         }
 
-        .sposs h1, .thank-you h1 {
+        .sposs h1,
+        .thank-you h1 {
             margin: 17px 51px 0 51px;
             font-size: 109px;
             font-weight: bold;
             color: #f8f8f8;
         }
 
-        .sposs h2, .thank-you h2 {
+        .sposs h2,
+        .thank-you h2 {
             margin: 0 51px 17px 51px;
             font-size: 54px;
             font-weight: normal;
@@ -103,7 +106,7 @@
         }
 
         .shade {
-            background-color: #dddddd !important;;  
+            background-color: #dddddd !important;
         }
 
         .nav-button {
@@ -134,9 +137,32 @@
         }
 
         video {
+            margin-top: 8.5px;
             max-width: 100%;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #e8af12;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background-color: #d8a000;
         }
     </style>
     <title>SPoSS</title>
@@ -255,11 +281,16 @@
             <div class="content-box">
                 <div class="header">Demo Video</div>
                 <div class="body">
-                    <video controls style="padding-top: 8.5px">
+                    <video controls>
                         <source src="demo.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
+            </div>
+
+            
+            <div class="cta-button-container">
+                <a href="https://sposs-67a96.web.app/" class="cta-button" target="_blank">Go to the Demo</a>
             </div>
         </div>
 
