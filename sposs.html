@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: #ebeaea;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+
+        .container {
+            text-align: center;
+            width: 80%;
+        }
+
+        .sposs, .thank-you {
+            background-color: #e8af12;
+            padding: 85px;
+            border-radius: 8px;
+            margin: auto;
+            width: 80%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+
+        .sposs h1, .thank-you h1 {
+            margin: 17px 51px 0 51px;
+            font-size: 109px;
+            font-weight: bold;
+            color: #f8f8f8;
+        }
+
+        .sposs h2, .thank-you h2 {
+            margin: 0 51px 17px 51px;
+            font-size: 54px;
+            font-weight: normal;
+            color: #f8f8f8;
+        }
+
+        .names,
+        .content-box {
+            background-color: #ffffff;
+            border-radius: 8px;
+            margin: 17px auto;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            color: #333333;
+            font-size: 24px;
+        }
+
+        .names {
+            padding: 8.5px;
+            max-width: 510px;
+        }
+
+        .content-box {
+            max-width: 860px;
+            min-height: 350px;
+        }
+
+        .header {
+            background-color: #e8af12;
+            color: white;
+            padding: 15px;
+            border-radius: 8px 8px 0 0;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .body {
+            padding: 0 50px 8.5px 50px;
+            text-align: left;
+        }
+
+        .content-box table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .content-box th,
+        .content-box td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .content-box th {
+            background-color: #e8af12;
+            color: white;
+        }
+
+        .content-box td {
+            background-color: #f9f9f9;
+        }
+
+        .shade {
+            background-color: #dddddd !important;;  
+        }
+
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: transparent;
+            border: none;
+            font-size: 2rem;
+            color: #e8af12;
+            cursor: pointer;
+        }
+
+        .nav-button-left {
+            left: 10px;
+        }
+
+        .nav-button-right {
+            right: 10px;
+        }
+
+        .content-page {
+            display: none;
+        }
+
+        .content-page.active {
+            display: block;
+        }
+
+        video {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <title>SPoSS</title>
+</head>
+
+<body>
+    <button class="nav-button nav-button-left" onclick="previousPage()"><i class="fas fa-arrow-left"></i></button>
+    <button class="nav-button nav-button-right" onclick="nextPage()"><i class="fas fa-arrow-right"></i></button>
+
+    <div class="container">
+        <div id="page1" class="content-page active">
+            <div class="sposs">
+                <h1>SPoSS</h1>
+                <h2>Simple Point of Sales System</h2>
+            </div>
+            <div class="names" style="margin-top:3em;">
+                <p>Marcelino, Nicole Angela</p>
+                <p>Paler, Marcus Joaquin</p>
+            </div>
+        </div>
+
+        <div id="page2" class="content-page">
+            <div class="content-box">
+                <div class="header">Overview</div>
+                <div class="body">
+                    <p>SPoSS is designed to provide small businesses a simple and straightforward way to digitize their
+                        Point of Sales. The system is a single-page web app for two (2) different users; for admins to
+                        manage products within the system and for customers to create orders.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="page3" class="content-page">
+            <div class="content-box">
+                <div class="header">Objectives</div>
+                <div class="body">
+                    <ul>
+                        <li>Digitize a business’ POS for more efficient and accurate commerce management.</li>
+                        <li>Enable admins to effectively manage product listings and inventory.</li>
+                        <li>Provide customers a user-friendly experience when ordering products.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="page4" class="content-page">
+            <div class="content-box">
+                <div class="header">Project Phases</div>
+                <div class="body">
+                    <ul>
+                        <li>Planning: Define requirements and scope.</li>
+                        <li>Design: Create system architecture and UI/UX design.</li>
+                        <li>Development: Implement frontend and backend functionalities.</li>
+                        <li>Testing: Perform unit and integration testing.</li>
+                        <li>Deployment: Deploy application to production environment.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="page5" class="content-page">
+            <div class="content-box">
+                <div class="header">Gantt Chart</div>
+                <div class="body">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th colspan="3">Week</th>
+                            </tr>
+                            <tr>
+                                <th>Activities</th>
+                                <th>1</th>
+                                <th>2</th>
+                                <th>3</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Planning</td>
+                                <td class="shade"></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Design</td>
+                                <td class="shade"></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Development</td>
+                                <td></td>
+                                <td class="shade"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Testing</td>
+                                <td></td>
+                                <td class="shade"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Deployment</td>
+                                <td></td>
+                                <td></td>
+                                <td class="shade"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="page6" class="content-page">
+            <div class="content-box">
+                <div class="header">Demo Video</div>
+                <div class="body">
+                    <video controls style="padding-top: 8.5px">
+                        <source src="demo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <div id="page7" class="content-page">
+            <div class="thank-you">
+                <h2>Thank You for Listening!</h2>
+            </div>
+            <div class="names" style="margin-top:3em;">
+                <p>Marcelino, Nicole Angela</p>
+                <p>Paler, Marcus Joaquin</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentPage = 1;
+        const totalPages = 7;
+
+        function showPage(page) {
+            for (let i = 1; i <= totalPages; i++) {
+                document.getElementById('page' + i).classList.remove('active');
+            }
+            document.getElementById('page' + page).classList.add('active');
+        }
+
+        function nextPage() {
+            if (currentPage < totalPages) {
+                currentPage++;
+                showPage(currentPage);
+            }
+        }
+
+        function previousPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                showPage(currentPage);
+            }
+        }
+    </script>
+</body>
+
+</html>
